@@ -13,4 +13,8 @@
     <string name="ringtone1_title">Phone ringtone - SIM 1</string>
     <string name="ringtone2_title">Phone ringtone - SIM 2</string>
 
+    <!-- Extra Settings -->
+    <string name="extra_settings_title">Extras</string>
+    <string name="extra_settings_summary">Additional settings</string>
+
 </resources>
