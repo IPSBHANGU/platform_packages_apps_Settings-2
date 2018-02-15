@@ -125,18 +125,6 @@
         android:title="@string/color_theme"
         android:summary="@string/summary_placeholder" />
 
-    <ListPreference
-        android:key="systemui_theme"
-        android:title="@string/device_theme"
-        android:entries="@array/systemui_theme_entries"
-        android:entryValues="@array/systemui_theme_values"
-        settings:controller="com.android.settings.display.SystemUiThemePreferenceController" />
-
-    <Preference
-        android:key="vr_display_pref"
-        android:title="@string/display_vr_pref_title"
-        android:fragment="com.android.settings.display.VrDisplayPreferencePicker" />
-
     <PreferenceCategory
         android:key="density_category"
         android:title="@string/density_category">
@@ -159,5 +147,27 @@
             android:title="@string/developer_smallest_width" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="theme_category"
+        android:title="@string/theme_category_title">
+
+    <ListPreference
+        android:key="systemui_theme"
+        android:title="@string/device_theme"
+        android:entries="@array/systemui_theme_entries"
+        android:entryValues="@array/systemui_theme_values"
+        settings:controller="com.android.settings.display.SystemUiThemePreferenceController" />
+
+    <Preference
+        android:key="vr_display_pref"
+        android:title="@string/display_vr_pref_title"
+        android:fragment="com.android.settings.display.VrDisplayPreferencePicker" />
+
+
+    <Preference
+        android:key="accent_picker"
+	android:title="@string/theme_accent_picker_title" />
+    </PreferenceCategory >
 
 </PreferenceScreen>
