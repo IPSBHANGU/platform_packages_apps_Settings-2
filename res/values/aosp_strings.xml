@@ -115,6 +115,7 @@
     <string name="packagename_text"><xliff:g id="package_name">%1$s</xliff:g></string>
 
 	<!-- Themes -->
+    <string name="theme_category_title">System Theme</string>
     <string name="system_theme_style_title">UI style</string>
     <string name="system_theme_style_auto">Wallpaper based</string>
     <string name="system_theme_style_light">Light UI</string>
