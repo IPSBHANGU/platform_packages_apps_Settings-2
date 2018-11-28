@@ -128,5 +128,12 @@
     <string name="force_allow_system_themes_summary">Allows you to use following themes and fonts options inspite of substratum installed.</string>
     <string name="force_theme_warning_title">Warning !</string>
     <string name="force_theme_warning_message">This could cause conflicts between substratum themes and system themes. We hope you know what are you getting into. #DontBlameUsLater :D</string>
+
+	<!-- Advanced night mode brightness -->
+    <string name="night_brightness_value_title">Lower brightness if Night Light</string>
+    <string name="night_auto_value_disabled">Disabled</string>
+    <string name="night_auto_value_min">Minimum brightness</string>
+    <string name="night_bright_low">Low brightness</string>
+    <string name="night_bright_midlow">Mid low brightness</string>
    
 </resources>
