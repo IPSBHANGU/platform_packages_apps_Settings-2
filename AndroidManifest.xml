@@ -3348,6 +3348,7 @@
         <!-- ExtraSettings -->
         <activity android:name=".Settings$ExtraSettingsActivity"
             android:label="@string/extra_settings_title"
+			android:icon="@drawable/ic_settings_extra"            
             android:taskAffinity="">
             <intent-filter android:priority="1">
                 <action android:name="com.extra.settings.ExtraSettings" />
