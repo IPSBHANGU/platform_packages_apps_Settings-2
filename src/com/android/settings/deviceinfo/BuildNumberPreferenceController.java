@@ -47,8 +47,6 @@ import com.android.settingslib.core.lifecycle.events.OnResume;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import java.util.Random;
 
-import android.os.SystemProperties;
-
 public class BuildNumberPreferenceController extends AbstractPreferenceController implements
         PreferenceControllerMixin, LifecycleObserver, OnResume {
 
@@ -105,24 +103,12 @@ public class BuildNumberPreferenceController extends AbstractPreferenceControlle
         final Preference preference = screen.findPreference(KEY_BUILD_NUMBER);
         if (preference != null) {
             try {
-                StringBuilder sb = new StringBuilder();
-                sb.append(BidiFormatter.getInstance().unicodeWrap(Build.DISPLAY));
-                String aospVersion = getAospVersion();
-                if (!aospVersion.equals("")){
-                    sb.append("\n");
-                    sb.append(aospVersion);
-                }
-                preference.setSummary(sb.toString());
+                preference.setSummary(BidiFormatter.getInstance().unicodeWrap(Build.DISPLAY));
                 preference.setEnabled(true);
             } catch (Exception e) {
                 preference.setSummary(R.string.device_info_default);
             }
         }
-    }
-
-    private String getAospVersion() {
-        String aospDisplayVersion = SystemProperties.get("ro.aosp.display.version","");
-        return aospDisplayVersion.equals("") ? "" : aospDisplayVersion;
     }
 
     @Override

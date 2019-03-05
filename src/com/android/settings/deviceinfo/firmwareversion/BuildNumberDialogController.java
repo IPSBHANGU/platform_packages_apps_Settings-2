@@ -22,8 +22,6 @@ import android.text.BidiFormatter;
 
 import com.android.settings.R;
 
-import android.os.SystemProperties;
-
 public class BuildNumberDialogController {
 
     @VisibleForTesting
@@ -35,23 +33,11 @@ public class BuildNumberDialogController {
         mDialog = dialog;
     }
 
-    private String getAospVersion() {
-        String aospDisplayVersion = SystemProperties.get("ro.aosp.display.version","");
-        return aospDisplayVersion.equals("") ? "" : aospDisplayVersion;
-    }
-
     /**
      * Updates the build number to the dialog.
      */
     public void initialize() {
-        
-        StringBuilder sb = new StringBuilder();
-        sb.append(BidiFormatter.getInstance().unicodeWrap(Build.DISPLAY));
-        String aospVersion = getAospVersion();
-        if (!aospVersion.equals("")){
-            sb.append("\n");
-            sb.append(aospVersion);
-        }
-        mDialog.setText(BUILD_NUMBER_VALUE_ID, sb.toString());
+        mDialog.setText(BUILD_NUMBER_VALUE_ID,
+                BidiFormatter.getInstance().unicodeWrap(Build.DISPLAY));
     }
 }
