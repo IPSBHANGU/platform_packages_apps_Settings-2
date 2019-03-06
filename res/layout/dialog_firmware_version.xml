@@ -51,7 +51,7 @@
             style="@style/device_info_dialog_value"
             android:id="@+id/firmware_version_value"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content"/>
         <TextView
             style="@style/device_info_dialog_label"
             android:id="@+id/aosp_version_label"
